@@ -12,10 +12,10 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className=" bg-background/50 sticky top-0 border-b md:pb-3 backdrop:blur">
-      <div className="container mx-auto flex   justify-between items-center">
+    <nav className="p-4 bg-background/50 sticky top-0 border-b backdrop:blur">
+      <div className="container mx-auto flex pb-6 justify-between items-center">
         <Link href="/">
-          <div className="text-black pt-4 pb-4 pl-0 text-3xl font-bold">BiLoG</div>
+          <div className="text-black text-2xl font-bold">BiLoG</div>
         </Link>
         <div className="hidden md:flex space-x-4 items-center">
           <Link href="/" className="text-black">
@@ -59,9 +59,9 @@ const Navbar = () => {
 
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="pb-4">BiLog</SheetTitle>
+                <SheetTitle className="pb-5">Bilog</SheetTitle>
                 <SheetDescription>
-                  <div className="flex flex-col gap-6">
+                  <div className="flex flex-col gap-5">
                     <Link href="/" className="text-black">
                       Home
                     </Link>
