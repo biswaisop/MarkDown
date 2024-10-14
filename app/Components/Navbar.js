@@ -12,10 +12,11 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="p-4 bg-background/50 sticky top-0 border-b backdrop:blur">
-      <div className="container mx-auto flex pb-6 justify-between items-center">
+    <nav className="py-2 bg-background/50 sticky top-0 border-b backdrop:blur">
+      <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
-          <div className="text-black text-2xl font-bold">BiLoG</div>
+          {/* Add margin or padding to shift the logo to the right */}
+          <div className="text-black text-2xl font-bold ml-4">BiLoG</div>
         </Link>
         <div className="hidden md:flex space-x-4 items-center">
           <Link href="/" className="text-black">
