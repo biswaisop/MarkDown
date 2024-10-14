@@ -1,7 +1,10 @@
-import Image from "next/image";
+import React from 'react';
+import Navbar from './Components/Navbar';
 
-export default function Home() {
+const Page = () => {
   return (
-    <div></div>
+    <main></main>
   );
-}
+};
+
+export default Page;
