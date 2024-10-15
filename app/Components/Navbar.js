@@ -60,9 +60,15 @@ const Navbar = () => {
         <div className="md:hidden">
           <Sheet>
             <div className="flex ">
-            <div className="px-2">
+              <div className="px-2">
                 <ModeToggle />
               </div>
+              <Button className="mx-1 text-xs" variant="outline">
+                  Login
+                </Button>
+                <Button className="mx-1 text-xs" variant="outline">
+                  Sign Up
+                </Button>
               <SheetTrigger asChild>
                 <Button
                   className="text-black dark:text-white focus:outline-none"
@@ -84,7 +90,6 @@ const Navbar = () => {
                   </svg>
                 </Button>
               </SheetTrigger>
-              
             </div>
             <SheetContent>
               <SheetHeader>
@@ -108,14 +113,6 @@ const Navbar = () => {
                     >
                       Contact
                     </Link>
-                    <div className="flex flex-col gap-3 align-center space-x-2 items-center">
-                      <Button className="mx-1 text-xs" variant="outline">
-                        Login
-                      </Button>
-                      <Button className="mx-1 text-xs" variant="outline">
-                        Sign Up
-                      </Button>
-                    </div>
                   </div>
                 </SheetDescription>
               </SheetHeader>
