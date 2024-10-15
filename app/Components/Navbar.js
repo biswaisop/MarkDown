@@ -9,38 +9,43 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/themeButton";
 
 const Navbar = () => {
   return (
     <nav className="py-2 bg-background/50 sticky top-0 border-b backdrop:blur">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
-          {/* Add margin or padding to shift the logo to the right */}
-          <div className="text-black text-2xl font-bold ml-4">BiLoG</div>
+          <div className="text-black dark:text-white text-2xl font-bold ml-4">
+            BiLoG
+          </div>
         </Link>
-        <div className="hidden md:flex space-x-4 items-center">
-          <Link href="/" className="text-black">
+        
+        <div className="hidden md:flex space-x-4 items-center ml-auto">
+          <Link href="/" className="text-black dark:text-white">
             Home
           </Link>
-          <Link href="/about" className="text-black">
+          <Link href="/about" className="text-black dark:text-white">
             About
           </Link>
-          <Link href="/contact" className="text-black">
+          <Link href="/contact" className="text-black dark:text-white">
             Contact
           </Link>
-          <div>
+          <div className="flex space-x-2 items-center mr-4">
             <Button className="mx-1" variant="outline">
               Login
             </Button>
             <Button className="mx-1" variant="outline">
               Sign Up
             </Button>
+            <ModeToggle className="mx-1" />
           </div>
         </div>
+
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="text-black focus:outline-none" variant="ghost">
+              <Button className="text-black dark:text-white focus:outline-none" variant="ghost">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -57,28 +62,30 @@ const Navbar = () => {
                 </svg>
               </Button>
             </SheetTrigger>
-
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="pb-5">Bilog</SheetTitle>
+                <SheetTitle className="pb-2 text-black dark:text-white">
+                  Bilog
+                </SheetTitle>
                 <SheetDescription>
                   <div className="flex flex-col gap-5">
-                    <Link href="/" className="text-black">
+                    <Link href="/" className="text-black dark:text-white">
                       Home
                     </Link>
-                    <Link href="/about" className="text-black">
+                    <Link href="/about" className="text-black dark:text-white">
                       About
                     </Link>
-                    <Link href="/contact" className="text-black">
+                    <Link href="/contact" className="text-black dark:text-white">
                       Contact
                     </Link>
-                    <div>
-                      <Button className="mx-1" variant="outline">
+                    <div className="flex space-x-2 items-center">
+                      <Button className="mx-1 text-xs" variant="outline">
                         Login
                       </Button>
-                      <Button className="mx-1" variant="outline">
+                      <Button className="mx-1 text-xs" variant="outline">
                         Sign Up
                       </Button>
+                      <ModeToggle className="mx-1" />
                     </div>
                   </div>
                 </SheetDescription>
